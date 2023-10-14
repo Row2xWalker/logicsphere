@@ -22,7 +22,7 @@ const propertyAcknowledgementSchema = new Schema({
         propertyNumber: String,
         dateAcquired: Date,
         description: String,
-        Amount: Number
+        amount: Number
       },
     ],
     issuer:{

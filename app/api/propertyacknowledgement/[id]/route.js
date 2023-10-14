@@ -1,7 +1,7 @@
 import { connectToDB } from "@utils/database";
 import PropertyAcknowledgement from "@models/propertyAcknowledgement";
 
-export const GET = async({params})=>{
+export const GET = async(request, {params})=>{
     try{
         await connectToDB();
 

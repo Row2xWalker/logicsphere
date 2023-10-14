@@ -14,7 +14,7 @@ const Header = () => {
           </div>
           <div className="my-auto">
           <span className="mx-4">
-          {session?.user?.name.first}
+              {session?.user?.name.first+" "+session?.user?.name.middle+" "+session?.user?.name.last}
           </span>
           <button className="hover:bg-blue-700 rounded-md px-2" onClick={()=> signOut()}>
             Sign Out

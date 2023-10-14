@@ -1,7 +1,7 @@
 import { connectToDB } from "@utils/database";
 import PropertyTransfer from "@models/propertyTransfer";
 
-export const GET = async({params})=>{
+export const GET = async(request, {params})=>{
     try{
         await connectToDB();
 

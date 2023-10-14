@@ -12,7 +12,7 @@ export const metadata = {
   title: 'Form Generator',
   description: 'Generate Form that is print ready',
 }
-
+  
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

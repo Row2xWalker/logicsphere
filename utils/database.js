@@ -11,7 +11,7 @@ export const connectToDB = async () => {
     }
 
     try{
-        await mongoose.connect("mongodb://localhost:27017/?directConnection=true", {
+        await mongoose.connect(process.env.MONGODB_URI, {
             dbName: "logicSphere",
             useNewUrlParser:true,
             useUnifiedTopology:false

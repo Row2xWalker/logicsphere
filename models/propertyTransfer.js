@@ -35,8 +35,8 @@ const propertyTransferSchema = new Schema({
         propertyNumber: String,
         dateAcquired: Date,
         description: String,
-        Amount: Number,
-        Condition: String,
+        amount: Number,
+        condition: String,
       },
     ],
     approver:{

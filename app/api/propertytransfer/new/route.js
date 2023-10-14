@@ -5,6 +5,7 @@ import PropertyTransfer from "@models/propertyTransfer";
 
 export const POST = async (req) => {
   const { 
+    propertyTransferNumber,
     entityName,
     fundCluster,
     fromAccountableOfficer,
@@ -19,11 +20,11 @@ export const POST = async (req) => {
 
   const date=new Date().toISOString()
   
-  const ptrDate = new Date();
-  const ptrMonth = ptrDate.getMonth() + 1
-  const ptrYear = ptrDate.getFullYear()
+  // const ptrDate = new Date();
+  // const ptrMonth = ptrDate.getMonth() + 1
+  // const ptrYear = ptrDate.getFullYear()
 
-  const ptr = `${ptrYear}-${("0"+ ptrMonth).slice(-2)}`
+  // const ptr = `${ptrYear}-${("0"+ ptrMonth).slice(-2)}`
   try {
     await connectToDB();
     const query = {
@@ -33,10 +34,10 @@ export const POST = async (req) => {
     }
 
     //format PTR number
-    const ptrCount = await PropertyTransfer.countDocuments(query)
-    const finalPtrNumber = `${ptr}-${("000"+ptrCount).slice(-3)}`
+    // const ptrCount = await PropertyTransfer.countDocuments(query)
+    // const finalPtrNumber = `${ptr}-${("000"+ptrCount).slice(-3)}`
     const newPropertyTransfer = new PropertyTransfer ({
-      propertyTransferNumber: finalPtrNumber,
+      propertyTransferNumber,
       entityName,
       fundCluster,
       fromAccountableOfficer,
