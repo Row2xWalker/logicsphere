@@ -39,6 +39,8 @@ const propertyAcknowledgementSchema = new Schema({
     }
 });
 
+propertyAcknowledgementSchema.set('timestamps',true)
+
 // Create the Property Acknowledgement model
 const PropertyAcknowledgement = models.PropertyAcknowledgement || model('PropertyAcknowledgement', propertyAcknowledgementSchema);
 
